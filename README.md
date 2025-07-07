@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Nimble
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A collection of quick, practical tools for daily data transformation and manipulation tasks. This app is designed for functionality over aesthetics - simple tools that get the job done efficiently.
 
-## Available Scripts
+## What is Nimble?
 
-In the project directory, you can run:
+Nimble is a toolkit of straightforward utilities that help with common data processing tasks. It's not meant to be beautiful or showcase-worthy, but rather to be a reliable set of tools you can count on when you need to quickly transform or filter data.
 
-### `npm start`
+## Available Tools
 
-Runs the app in the development mode.\
+### CSV Substitution Tool
+Transform CSV data using pattern substitution with numbered placeholders like `{0}`, `{1}`, `{2}`, etc. Perfect for quickly reformatting data or creating SQL queries from CSV files.
+
+### Line Removal Tool
+Remove lines from text that contain specific IDs. Useful for filtering scripts, log files, or any text data where you need to exclude entries based on a list of identifiers.
+
+## Getting Started
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm
+
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App
+```bash
+npm start
+```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Development
 
-### `npm test`
+### Available Scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-### `npm run build`
+## Philosophy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This app follows a "function over form" approach:
+- **Simple and direct**: No unnecessary complexity
+- **Fast and reliable**: Tools that work when you need them
+- **Practical focus**: Each tool solves a real, common problem
+- **Minimal UI**: Clean interfaces that don't get in the way
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to add new tools that follow the same philosophy - simple, practical utilities that solve common data processing problems.
 
-### `npm run eject`
+## Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React](https://reactjs.org/) - Frontend framework
+- [Create React App](https://github.com/facebook/create-react-app) - Build tool
+- [React Router](https://reactrouter.com/) - Navigation
