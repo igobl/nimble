@@ -27,12 +27,14 @@ function HomePage() {
             </Link>
           </div>
           
-          {/* Future tools can be added here */}
-          <div className="tool-card coming-soon">
-            <h2>More Tools Coming Soon</h2>
-            <p>Additional data transformation and manipulation tools will be available here.</p>
-            <span className="coming-soon-badge">Coming Soon</span>
+          <div className="tool-card">
+            <h2>JSON Prettifier Tool</h2>
+            <p>Format and prettify your JSON for easier reading and debugging.</p>
+            <Link to="/json-prettifier" className="tool-link">
+              Open JSON Prettifier Tool
+            </Link>
           </div>
+          
         </div>
       </main>
     </div>

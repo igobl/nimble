@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
 import CsvSubstitutionTool from './components/CsvSubstitutionTool';
 import LineRemovalTool from './components/LineRemovalTool';
+import JsonPrettifierTool from './components/JsonPrettifierTool';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/csv-substitution" element={<CsvSubstitutionTool />} />
           <Route path="/line-removal" element={<LineRemovalTool />} />
+          <Route path="/json-prettifier" element={<JsonPrettifierTool />} />
         </Routes>
       </div>
     </Router>
