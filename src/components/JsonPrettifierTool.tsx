@@ -18,41 +18,67 @@ const JsonPrettifierTool: React.FC = () => {
     }
   };
 
+  const handleCopy = async () => {
+    if (output) {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    }
+  };
+
   return (
-    <div style={{ maxWidth: 700, margin: '0 auto', padding: 24 }}>
-      <h2>JSON Prettifier Tool</h2>
-      <textarea
-        value={input}
-        onChange={e => setInput(e.target.value)}
-        placeholder="Paste or type your JSON here..."
-        rows={10}
-        style={{ width: '100%', fontFamily: 'monospace', marginBottom: 12 }}
-      />
-      <br />
-      <button onClick={handlePrettify} style={{ marginBottom: 12 }}>Prettify</button>
-      {error && <div style={{ color: 'red', marginBottom: 12 }}>{error}</div>}
-      <textarea
-        value={output}
-        readOnly
-        placeholder="Prettified JSON will appear here..."
-        rows={10}
-        style={{ width: '100%', fontFamily: 'monospace', background: '#f6f8fa', marginBottom: 8 }}
-      />
-      <br />
-      <button
-        onClick={async () => {
-          if (output) {
-            await navigator.clipboard.writeText(output);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 1500);
-          }
-        }}
-        disabled={!output}
-        style={{ marginBottom: 8 }}
-      >
-        Copy to Clipboard
-      </button>
-      {copied && <span style={{ color: 'green', marginLeft: 8 }}>Copied!</span>}
+    <div className="json-prettifier-tool">
+      <header className="tool-header">
+        <h1>JSON Prettifier Tool</h1>
+        <p>Format and prettify your JSON for easier reading and debugging.</p>
+      </header>
+      <main className="tool-main">
+        <div className="input-section">
+          <div className="text-area-container">
+            <h2>Input JSON</h2>
+            <textarea
+              value={input}
+              onChange={e => setInput(e.target.value)}
+              placeholder="Paste or type your JSON here..."
+              rows={10}
+              className="text-area"
+            />
+          </div>
+          <button
+            onClick={handlePrettify}
+            className="calculate-button"
+            style={{ marginTop: 12 }}
+            disabled={!input.trim()}
+          >
+            Prettify
+          </button>
+          {error && <div style={{ color: 'red', marginTop: 12 }}>{error}</div>}
+        </div>
+        <div className="results-section">
+          <div className="results-header">
+            <h2>Prettified JSON</h2>
+            {output && (
+              <button
+                onClick={handleCopy}
+                className="copy-button"
+                style={{ marginLeft: 8 }}
+              >
+                Copy to Clipboard
+              </button>
+            )}
+            {copied && <span style={{ color: 'green', marginLeft: 8 }}>Copied!</span>}
+          </div>
+          <div className="results-container">
+            <textarea
+              value={output}
+              readOnly
+              placeholder="Prettified JSON will appear here..."
+              rows={10}
+              className="results-text-area"
+            />
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
