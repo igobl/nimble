@@ -353,6 +353,70 @@
   position: relative;
 }
 
+/* Utility classes for expanded layouts */
+.expanded-80vh {
+  height: 80vh;
+  transition: height 250ms ease;
+}
+
+.fill-height {
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.syntax-block {
+  margin: 0 !important;
+  background: transparent !important;
+  height: 100% !important;
+}
+
+/* Smooth height transition utilities */
+.collapsible-height {
+  overflow: hidden;
+  transition: max-height 250ms ease;
+}
+
+.maxh-400px {
+  max-height: 400px;
+}
+
+.maxh-80vh {
+  max-height: 80vh;
+}
+
+/* Full viewport height helpers */
+.expanded-100vh {
+  height: 100vh;
+  transition: height 250ms ease;
+}
+
+.full-vh {
+  height: 100vh;
+}
+
+.no-max-height {
+  max-height: none !important;
+}
+
+/* Custom vibrant light theme overrides for react-json-view-lite */
+/* Object keys */
+._1MGIk { color: #1a73e8 !important; }
+/* Punctuation (commas, colons) */
+._3uHL6, ._oLqym { color: #9aa0a6 !important; }
+/* Strings */
+._2T6PJ, ._1Gho6, ._vGjyY { color: #d93025 !important; }
+/* Numbers */
+._1bQdo { color: #e37400 !important; }
+/* Booleans */
+._3zQKs { color: #188038 !important; }
+/* Null values */
+._2KJWg, ._2AXVT { color: #6d4c41 !important; }
+/* Brackets/braces */
+._1xvuR { color: #5f6368 !important; }
+
 .results-text-area {
   width: 100%;
   min-height: 200px;
@@ -367,6 +431,7 @@
   color: #333;
   overflow-y: auto;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .results-text-area:focus {
