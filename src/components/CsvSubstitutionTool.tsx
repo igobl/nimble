@@ -5,6 +5,7 @@ function CsvSubstitutionTool() {
   const [pattern, setPattern] = useState('');
   const [results, setResults] = useState('');
   const [copyStatus, setCopyStatus] = useState('');
+  const [delimiter, setDelimiter] = useState(',');
 
   const handleCalculate = () => {
     if (!inputList.trim() || !pattern.trim()) {
@@ -16,8 +17,8 @@ function CsvSubstitutionTool() {
     const lines = inputList.split('\n').filter(line => line.trim() !== '');
     
     const transformedLines = lines.map(line => {
-      // Split the line by commas to get CSV columns
-      const columns = line.split(',');
+      // Split the line by the chosen delimiter to get columns
+      const columns = line.split(delimiter);
       
       // Replace numbered placeholders with column values
       let result = pattern;
@@ -81,6 +82,19 @@ function CsvSubstitutionTool() {
               onChange={(e) => setPattern(e.target.value)}
               placeholder="Enter your pattern here. Use {0}, {1}, {2} etc. for column values..."
               className="text-area"
+            />
+          </div>
+
+          <div className="text-area-container">
+            <h2>Delimiter</h2>
+            <input
+              type="text"
+              value={delimiter}
+              onChange={e => setDelimiter(e.target.value)}
+              placeholder=","
+              maxLength={3}
+              style={{ width: 40, fontFamily: 'monospace', marginBottom: 12, textAlign: 'center' }}
+              title="Delimiter to split columns (e.g. , | ; | tab | space)"
             />
           </div>
           
