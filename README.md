@@ -1,6 +1,8 @@
 # Nimble
 
-A collection of quick, practical tools for daily data transformation and manipulation tasks. This app is designed for functionality over aesthetics - simple tools that get the job done efficiently.
+I needed a set of tools to carry out some tasks that I could trust. For example, if I want to prettyfy some json that contains sensitive information, I do not want to send that json to some online formatter that I have no control of. Instead I built this which is running on my local machine in docker ensuring I have the tools I need to help me day to day that without compromising on data security.
+
+This app is designed for functionality over aesthetics - simple tools that get the job done efficiently. I am also not a react developer :D 
 
 ## What is Nimble?
 
@@ -13,6 +15,12 @@ Transform CSV data using pattern substitution with numbered placeholders like `{
 
 ### Line Removal Tool
 Remove lines from text that contain specific IDs. Useful for filtering scripts, log files, or any text data where you need to exclude entries based on a list of identifiers.
+
+### JSON Prettyfier
+Format a json string and display it in a readable way, allowing for easy inspection of json objects.
+
+![JSON Prettifier screenshot](images/jsonpretty.png)
+
 
 ## Getting Started
 
