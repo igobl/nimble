@@ -35,6 +35,14 @@ function HomePage() {
             </Link>
           </div>
           
+          <div className="tool-card">
+            <h2>Base64 Encoder/Decoder Tool</h2>
+            <p>Encode text to Base64 or decode Base64 strings back to text.</p>
+            <Link to="/base64-encoder-decoder" className="tool-link">
+              Open Base64 Encoder/Decoder Tool
+            </Link>
+          </div>
+          
         </div>
       </main>
     </div>
