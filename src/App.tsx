@@ -7,6 +7,7 @@ import CsvSubstitutionTool from './components/CsvSubstitutionTool';
 import LineRemovalTool from './components/LineRemovalTool';
 import JsonPrettifierTool from './components/JsonPrettifierTool';
 import Base64EncoderDecoder from './components/Base64EncoderDecoder';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/line-removal" element={<LineRemovalTool />} />
           <Route path="/json-prettifier" element={<JsonPrettifierTool />} />
           <Route path="/base64-encoder-decoder" element={<Base64EncoderDecoder />} />
+          <Route path="/todo-list" element={<TodoList />} />
         </Routes>
       </div>
     </Router>

@@ -43,6 +43,14 @@ function HomePage() {
             </Link>
           </div>
           
+          <div className="tool-card">
+            <h2>To-Do List</h2>
+            <p>Create and manage a small list of to-dos.</p>
+            <Link to="/todo-list" className="tool-link">
+              To-Do List
+            </Link>
+          </div>
+
         </div>
       </main>
     </div>
