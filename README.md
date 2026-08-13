@@ -53,6 +53,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Philosophy
 
 This app follows a "function over form" approach:
+- **Runs locally**: Control over where potentially sensitive data is sent
 - **Simple and direct**: No unnecessary complexity
 - **Fast and reliable**: Tools that work when you need them
 - **Practical focus**: Each tool solves a real, common problem
