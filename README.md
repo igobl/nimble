@@ -21,24 +21,34 @@ Format a json string and display it in a readable way, allowing for easy inspect
 
 ![JSON Prettifier screenshot](images/jsonpretty.png)
 
+### JSON to CSV
+Paste a JSON payload (a raw array or a nested object), pick which fields to extract, and copy or download a CSV. Field checkboxes are discovered from the selected row array; extra dotted paths can be added by hand.
+
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm
+### Easiest way (no terminal)
 
-### Installation
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+You only need to do this once: install Node.js from [https://nodejs.org](https://nodejs.org) (the LTS version).
 
-### Running the App
+Then double-click:
+
+- **Mac:** `Start Nimble.command`
+- **Windows:** `Start Nimble.bat`
+
+The first launch can take a few minutes. A browser window should open at [http://localhost:3000](http://localhost:3000). Leave the window that opened until you are finished, then close it to stop the app.
+
+If macOS says the file cannot be opened, right-click it → **Open**, and confirm.
+
+### From the terminal
+
+Prerequisites: Node.js (version 14 or higher) and npm.
+
 ```bash
+npm install
 npm start
 ```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Development

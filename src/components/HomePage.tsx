@@ -34,6 +34,14 @@ function HomePage() {
               Open JSON Prettifier Tool
             </Link>
           </div>
+
+          <div className="tool-card">
+            <h2>JSON to CSV Tool</h2>
+            <p>Paste JSON, choose the fields to extract, and download them as CSV.</p>
+            <Link to="/json-to-csv" className="tool-link">
+              Open JSON to CSV Tool
+            </Link>
+          </div>
           
           <div className="tool-card">
             <h2>Base64 Encoder/Decoder Tool</h2>

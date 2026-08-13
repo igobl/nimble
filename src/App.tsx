@@ -6,6 +6,7 @@ import HomePage from './components/HomePage';
 import CsvSubstitutionTool from './components/CsvSubstitutionTool';
 import LineRemovalTool from './components/LineRemovalTool';
 import JsonPrettifierTool from './components/JsonPrettifierTool';
+import JsonToCsvTool from './components/JsonToCsvTool';
 import Base64EncoderDecoder from './components/Base64EncoderDecoder';
 import TodoList from './components/TodoList';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/csv-substitution" element={<CsvSubstitutionTool />} />
           <Route path="/line-removal" element={<LineRemovalTool />} />
           <Route path="/json-prettifier" element={<JsonPrettifierTool />} />
+          <Route path="/json-to-csv" element={<JsonToCsvTool />} />
           <Route path="/base64-encoder-decoder" element={<Base64EncoderDecoder />} />
           <Route path="/todo-list" element={<TodoList />} />
         </Routes>
